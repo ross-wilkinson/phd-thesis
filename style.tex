@@ -37,11 +37,11 @@
 \usepackage[T1]{fontenc}
 %\usepackage[utf8]{inputenc}
 \usepackage{lmodern}
-
 \usepackage[english]{babel}
 \usepackage{csquotes}
-
 \usepackage[authordate-trad,backend=biber]{biblatex-chicago}
+\usepackage{arydshln} %dashed lines in tabular environment
+\usepackage{tabularx} %set fixed table width to wrap text
 
 %Lists.
 \usepackage{mdframed,mdwlist} 		%Use these for nice lists (less white space).
@@ -73,5 +73,6 @@
 \newcommand{\apriori}{\textit{a priori}} %Before hand.
 \newcommand{\etal}{\textit{et al.}} %And others, with correct punctuation.
 \newcommand{\naive}{na\"\i{}ve} %Queen Amidala is young and \naive{}.
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
 
 % *************** End of document style definition ***************

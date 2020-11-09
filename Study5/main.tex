@@ -42,10 +42,30 @@ Because different investigators use different names, symbols, and sets of rotati
     \label{fig:m4f1}
 \end{figure}
 
+% \begin{table}[htbp]
+%     \centering
+%     \includegraphics[width=\textwidth]{Study5/Table1.png}
+%     \caption[Notation, reference coordinates, and definitions used in this study.]{\textbf{Notation, reference coordinates, and definitions used in this study.} Notation, reference coordinates, and definitions used to describe the orientation and motion of the IMU and marker cluster body in this study.}
+%     \label{tab:m4t1}
+% \end{table}
+
 \begin{table}[htbp]
     \centering
-    \includegraphics[width=\textwidth]{Study5/Table1.png}
-    \caption[Notation, reference coordinates, and definitions used in this study.]{\textbf{Notation, reference coordinates, and definitions used in this study.} Notation, reference coordinates, and definitions used to describe the orientation and motion of the IMU and marker cluster body in this study.}
+    \ra{1.3}
+    \begin{tabularx}{\textwidth}{@{}lX@{}}
+        \toprule
+        \textbf{Parameter} & \textbf{Definitions and symbols} \\
+        \midrule
+        Local- and global-coordinate system & right-handed cartesian \\
+        Global x, y, and z axis definitions & $+x$ to the right, $+y$ straight up, $+z$ toward viewer \\
+        Euler angles & angular position about local $x$, $y$, and $z$ axes defined as bank, heading, and attitude, respectively \\
+        Symbols & $\psi =$ bank, $\theta =$ heading, $\phi =$ attitude \\
+        Angular velocity & about local $x$, $y$, and $z$ axes defined as roll ($\psi_\epsilon$), yaw ($\theta_\epsilon$), and pitch ($\phi_\epsilon$), respectively \\
+        Euler angle rotation order & Heading, attitude, then bank \\
+        Angle units & radians and radians per second \\
+        \bottomrule
+    \end{tabularx}
+    \caption{Notation, reference coordinates, and definitions used to describe the orientation and motion of the IMU and marker cluster body in this study.}
     \label{tab:m4t1}
 \end{table}
 
@@ -84,10 +104,39 @@ Differences between the IMU and musculoskeletal model's range of vertical displa
     \label{fig:m4f3}
 \end{figure}
 
+% \begin{table}[htbp]
+%     \centering
+%     \includegraphics[width=\textwidth]{Study5/Table2.png}
+%     \caption[The sensor performance was excellent across all conditions] {\textbf{The sensor performance was excellent across all conditions.} Group mean ($\pm$ standard deviation) RMS error in each Euler parameter describing the yaw, pitch, and roll components of the IMU angular velocity (rad$\cdot$s$^{-1}$) compared to the rigid marker cluster body during non-seated cycling at three different power outputs (10$\%$, 30$\%$, and 50$\%$ P$_{max.i}$) and two different cadences (70 rpm and 120 rpm).}
+%     \label{tab:m4t2}
+% \end{table}
+
 \begin{table}[htbp]
     \centering
-    \includegraphics[width=\textwidth]{Study5/Table2.png}
-    \caption[The sensor performance was excellent across all conditions] {\textbf{The sensor performance was excellent across all conditions.} Group mean ($\pm$ standard deviation) RMS error in each Euler parameter describing the yaw, pitch, and roll components of the IMU angular velocity (rad$\cdot$s$^{-1}$) compared to the rigid marker cluster body during non-seated cycling at three different power outputs (10$\%$, 30$\%$, and 50$\%$ P$_{max.i}$) and two different cadences (70 rpm and 120 rpm).}
+    \ra{1.3}
+    \begin{tabular}{@{}l*{3}{r}@{}}
+        \toprule
+         & \multicolumn{3}{c}{RMS error} \\
+        \cmidrule{2-4}
+        Conditions & \multicolumn{1}{c}{Yaw ($\theta_\epsilon$)} & \multicolumn{1}{c}{Pitch ($\phi_\epsilon$)} & \multicolumn{1}{c}{Roll ($\psi_\epsilon$)} \\
+        \midrule
+        $10\%\ P_{max.i}$ & \\
+        \hspace{4mm}70 rpm & $0.16 \pm 0.02$ & $0.14 \pm 0.02$ & $0.11 \pm 0.03$ \\
+        \hdashline[1pt/3pt]
+        \hspace{4mm}120 rpm & $0.22 \pm 0.03$ & $0.17 \pm 0.03$ & $0.18 \pm 0.08$ \\
+        \hline
+        $30\%\ P_{max.i}$ & \\
+        \hspace{4mm}70 rpm & $0.19 \pm 0.05$ & $0.15 \pm 0.04$ & $0.15 \pm 0.08$ \\
+        \hdashline[1pt/3pt]
+        \hspace{4mm}120 rpm & $0.19 \pm 0.05$ & $0.18 \pm 0.08$ & $0.16 \pm 0.02$ \\
+        \hline
+        $50\%\ P_{max.i}$ & \\
+        \hspace{4mm}70 rpm & $0.21 \pm 0.02$ & $0.15 \pm 0.02$ & $0.12 \pm 0.01$ \\
+        \hdashline[1pt/3pt]
+        \hspace{4mm}120 rpm & $0.24 \pm 0.06$ & $0.19 \pm 0.05$ & $0.17 \pm 0.05$ \\
+        \bottomrule
+    \end{tabular}
+    \caption{The sensor performance was excellent across all conditions. Group mean ($\pm$ standard deviation) RMS error in each Euler parameter describing the yaw, pitch, and roll components of the IMU angular velocity ($rad\cdot s^{-1}$) compared to the rigid marker cluster body during non-seated cycling at three different power outputs ($10\%$, $30\%$, and $50\%$ $P_{max.i}$) and two different cadences (70 rpm and 120 rpm).}
     \label{tab:m4t2}
 \end{table}
 
@@ -98,10 +147,28 @@ Differences between the IMU and musculoskeletal model's range of vertical displa
     \label{fig:m4f4}
 \end{figure}
 
+% \begin{table}[htbp]
+%     \centering
+%     \includegraphics[width=\textwidth]{Study5/Table3.png}
+%     \caption[There was good agreement between the IMU and cluster, but not between the IMU and model] {\textbf{There was good agreement between the IMU and cluster, but not between the IMU and model.} A fixed limits of agreement analysis was used to compare the range of vertical displacement derived from an IMU to a rigid marker cluster. Positive values indicate an overestimation of the marker cluster's vertical displacement by the IMU (IMU \textminus Cluster). All measures are in millimetres. A variable limits of agreement analysis was used to compare the range of vertical displacement derived from an IMU to the musculoskeletal model. All measures are in millimetres.}
+%     \label{tab:m4t3}
+% \end{table}
+
 \begin{table}[htbp]
     \centering
-    \includegraphics[width=\textwidth]{Study5/Table3.png}
-    \caption[There was good agreement between the IMU and cluster, but not between the IMU and model] {\textbf{There was good agreement between the IMU and cluster, but not between the IMU and model.} A fixed limits of agreement analysis was used to compare the range of vertical displacement derived from an IMU to a rigid marker cluster. Positive values indicate an overestimation of the marker cluster's vertical displacement by the IMU (IMU \textminus Cluster). All measures are in millimetres. A variable limits of agreement analysis was used to compare the range of vertical displacement derived from an IMU to the musculoskeletal model. All measures are in millimetres.}
+    \ra{1.3}
+    \begin{tabularx}{\textwidth}{@{}X*{4}{X}l*{3}{X}@{}}
+        \toprule
+         & \multicolumn{4}{c}{Agreement analysis} && \multicolumn{3}{c}{Descriptive statistics} \\
+         \cmidrule{2-5} \cmidrule{7-9}
+         & LloA & UloA & Accuracy (Bias) & Precision (MAD) && Range & Ave. err. & Max. err. \\
+        \midrule
+        IMU vs Cluster & $-8.3$ & $11.6$ & $1.6$ & $3.5$ && $88.3$ & $1.8\%$ & $\pm 3.9 \%$ \\
+        \hdashline[1pt/3pt]
+        IMU vs Model & $0.37x - 13.1$ & $0.37x - 19.0$ & $0.37x + 3.0$ & $5.6$ && ${-}$ & ${-}$ & ${-}$ \\
+        \bottomrule
+    \end{tabularx}
+    \caption{There was good agreement between the IMU and cluster, but not between the IMU and model. A fixed limits of agreement analysis was used to compare the range of vertical displacement derived from an IMU to a rigid marker cluster. Positive values indicate an overestimation of the marker cluster's vertical displacement by the IMU (IMU $-$ Cluster). All measures are in millimetres. A variable limits of agreement analysis was used to compare the range of vertical displacement derived from an IMU to the musculoskeletal model. All measures are in millimetres.}
     \label{tab:m4t3}
 \end{table}
 
